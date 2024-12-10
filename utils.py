@@ -22,7 +22,7 @@ def make_interactions_dataset(
         num_inns: int = 100,
         num_groups: int = 5,
         goods: List[str] = GOODS,
-        return_inns: bool = True
+        outer_prob: float = 0.2,
 ) -> Tuple[pd.DataFrame, List[int], Dict[int, int], Dict[int, str]]:
     """
     Генерируем транзакции между фирмами +- осмысленно.
@@ -38,7 +38,7 @@ def make_interactions_dataset(
     transactions = []
     for i in range(num_transactions):
         group = random.randint(1, num_groups)
-        cross_group = random.random() < 0.3
+        cross_group = random.random() < outer_prob
         
         # если с фирмой из другой группы
         if cross_group:
