@@ -157,7 +157,7 @@ def calculate_auc_score(lightfm_model, interactions_matrix,
         lightfm_model, interactions_matrix, 
         item_features=question_features, 
         user_features=professional_features, 
-        num_threads=1).mean()
+        num_threads=4).mean()
     return score
 
 
@@ -184,5 +184,5 @@ def calculate_precision_at_k(lightfm_model, interactions_matrix,
         lightfm_model, interactions_matrix, 
         item_features=question_features, 
         user_features=professional_features, 
-        num_threads=1).mean()
+        num_threads=4).mean()
     return score
