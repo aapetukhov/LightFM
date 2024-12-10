@@ -1,0 +1,10 @@
+ipykernel
+ipywidgets
+tqdm
+setuptools<60
+wheel<0.37
+pandas
+numpy
+faker
+ace_tools
+lightfm
